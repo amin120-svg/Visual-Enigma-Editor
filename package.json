@@ -1,0 +1,15 @@
+{
+  "name": "visual-enigma-editor-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local-first desktop shell for Visual Enigma Editor",
+  "main": "main.cjs",
+  "scripts": {
+    "build:ai": "esbuild ai/index.ts --bundle --platform=node --format=cjs --target=node24 --outfile=build/ai-runtime.cjs",
+    "start": "npm run build:ai && electron ."
+  },
+  "devDependencies": {
+    "electron": "44.0.0",
+    "esbuild": "^0.28.2"
+  }
+}
